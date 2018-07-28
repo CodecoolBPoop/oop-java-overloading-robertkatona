@@ -6,7 +6,7 @@ import java.util.Currency;
 
 public class Product {
 
-    private static int counter = 1;
+    private static int counter = 0;
     private int id;
     private String name;
     private float defaultPrice;
@@ -16,7 +16,7 @@ public class Product {
     private List<Product> productList;
 
     public Product() {
-        this.id = counter ++;
+        this.id = counter++;
     }
 
     public Product(String name, float defaultPrice, Currency defaultCurrency) {
