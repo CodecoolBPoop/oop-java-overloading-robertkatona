@@ -1,11 +1,10 @@
 package com.codecool.uml.overloading;
 
-import com.sun.tools.javac.util.ArrayUtils;
+
 
 import java.util.ArrayList;
 import java.util.Currency;
 import java.util.List;
-import java.util.Arrays;
 
 public class Product {
 
@@ -15,16 +14,17 @@ public class Product {
     private float defaultPrice;
     private Currency defaultCurrency;
     private ProductCategory productCategory;
+    private FeaturedProductCategory featuredProductCategory;
 
     private Supplier supplier;
     private static List<Product> productList = new ArrayList<Product>();
 
-    public Product(String name, float defaultPrice, Currency defaultCurrency, ProductCategory productCategory) {
+    public Product(String name, float defaultPrice, Currency defaultCurrency, FeaturedProductCategory featuredProductCategory) {
         this.id = counter++;
         this.name = name;
         this.defaultPrice = defaultPrice;
         this.defaultCurrency = defaultCurrency;
-        this.productCategory = productCategory;
+        this.featuredProductCategory = featuredProductCategory;
         productList.add(this);
     }
 
@@ -65,6 +65,14 @@ public class Product {
         this.productCategory = productCategory;
     }
 
+    public FeaturedProductCategory getFeaturedProductCategory() {
+        return featuredProductCategory;
+    }
+
+    public void setFeaturedProductCategory(FeaturedProductCategory featuredProductCategory) {
+        this.featuredProductCategory = featuredProductCategory;
+    }
+
     public Supplier getSupplier() {
         return supplier;
     }
@@ -78,6 +86,8 @@ public class Product {
     }
 
     @Override
-    public String toString() { return super.toString(); }
+    public String toString() {
+        return super.toString();
+    }
 }
 
