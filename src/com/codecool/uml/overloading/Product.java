@@ -1,7 +1,11 @@
 package com.codecool.uml.overloading;
 
+import com.sun.tools.javac.util.ArrayUtils;
+
+import java.util.ArrayList;
 import java.util.Currency;
 import java.util.List;
+import java.util.Arrays;
 
 public class Product {
 
@@ -11,15 +15,18 @@ public class Product {
     private float defaultPrice;
     private Currency defaultCurrency;
     private ProductCategory productCategory;
+
     private Supplier supplier;
     private List<Product> productList;
 
-    public Product(String name, float defaultPrice, Currency defaultCurrency) {
+    public Product(String name, float defaultPrice, Currency defaultCurrency, ProductCategory productCategory) {
         this.id = counter++;
         this.name = name;
         this.defaultPrice = defaultPrice;
         this.defaultCurrency = defaultCurrency;
+        this.productCategory = productCategory;
     }
+
 
     public int getId() {
         return id;
@@ -65,15 +72,10 @@ public class Product {
         this.supplier = supplier;
     }
 
-    public List<Product> getAllProductsBy(ProductCategory productCategory){
-        List<Product> productListByPoduct= this.productList;
-        return productListByPoduct;
+    public List<Product> getProductList() {
+        return productList;
     }
 
-    public List<Product> getAllProductsBy(Supplier supplier){
-        List<Product> productListBySupplier= this.productList;
-        return productListBySupplier;
-    }
 
     @Override
     public String toString() {
