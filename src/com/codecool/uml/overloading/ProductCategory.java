@@ -3,7 +3,7 @@ package com.codecool.uml.overloading;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductCategory extends Product {
+public class ProductCategory {
 
     private int id;
     private String name;
@@ -19,17 +19,16 @@ public class ProductCategory extends Product {
         this.description = description;
     }
 
-    @Override
     public int getId() {
         return id;
     }
 
-    @Override
+
     public String getName() {
         return name;
     }
 
-    @Override
+
     public void setName(String name) {
         this.name = name;
     }

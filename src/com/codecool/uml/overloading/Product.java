@@ -2,7 +2,6 @@ package com.codecool.uml.overloading;
 
 import java.util.Currency;
 import java.util.List;
-import java.util.Currency;
 
 public class Product {
 
@@ -15,11 +14,8 @@ public class Product {
     private Supplier supplier;
     private List<Product> productList;
 
-    public Product() {
-        this.id = counter++;
-    }
-
     public Product(String name, float defaultPrice, Currency defaultCurrency) {
+        this.id = counter++;
         this.name = name;
         this.defaultPrice = defaultPrice;
         this.defaultCurrency = defaultCurrency;
