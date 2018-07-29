@@ -5,22 +5,14 @@ import java.util.List;
 
 public class ProductCategory {
 
-    private int id;
     private String name;
     private String department;
     private String description;
-
-    public ProductCategory() {
-    }
 
     public ProductCategory(String name, String department, String description) {
         this.name = name;
         this.department = department;
         this.description = description;
-    }
-
-    public int getId() {
-        return id;
     }
 
 
@@ -55,5 +47,7 @@ public class ProductCategory {
     }
 
     @Override
-    public String toString() { return super.toString(); }
+    public String toString() {
+        return super.toString();
+    }
 }
