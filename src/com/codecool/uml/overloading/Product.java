@@ -1,29 +1,33 @@
 package com.codecool.uml.overloading;
 
+import com.sun.tools.javac.util.ArrayUtils;
+
+import java.util.ArrayList;
 import java.util.Currency;
 import java.util.List;
-import java.util.Currency;
+import java.util.Arrays;
 
 public class Product {
 
-    private static int counter = 1;
+    private static int counter = 0;
     private int id;
     private String name;
     private float defaultPrice;
     private Currency defaultCurrency;
     private ProductCategory productCategory;
+
     private Supplier supplier;
-    private List<Product> productList;
+    private static List<Product> productList = new ArrayList<Product>();
 
-    public Product() {
-        this.id = counter ++;
-    }
-
-    public Product(String name, float defaultPrice, Currency defaultCurrency) {
+    public Product(String name, float defaultPrice, Currency defaultCurrency, ProductCategory productCategory) {
+        this.id = counter++;
         this.name = name;
         this.defaultPrice = defaultPrice;
         this.defaultCurrency = defaultCurrency;
+        this.productCategory = productCategory;
+        productList.add(this);
     }
+
 
     public int getId() {
         return id;
@@ -69,19 +73,10 @@ public class Product {
         this.supplier = supplier;
     }
 
-    public List<Product> getAllProductsBy(ProductCategory productCategory){
-        List<Product> productListByPoduct= this.productList;
-        return productListByPoduct;
+    public List<Product> getProductList() {
+        return productList;
     }
 
-    public List<Product> getAllProductsBy(Supplier supplier){
-        List<Product> productListBySupplier= this.productList;
-        return productListBySupplier;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
-    }
+    public String toString() { return toString(); }
 }
 
