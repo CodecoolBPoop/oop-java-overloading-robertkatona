@@ -54,8 +54,7 @@ public class ProductCategory {
         return getProducts;
     }
 
-    @Override
     public String toString() {
-        return super.toString();
+        return toString();
     }
 }

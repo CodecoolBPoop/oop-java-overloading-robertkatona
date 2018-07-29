@@ -17,7 +17,7 @@ public class Product {
     private ProductCategory productCategory;
 
     private Supplier supplier;
-    private List<Product> productList;
+    private static List<Product> productList = new ArrayList<Product>();
 
     public Product(String name, float defaultPrice, Currency defaultCurrency, ProductCategory productCategory) {
         this.id = counter++;
@@ -25,6 +25,7 @@ public class Product {
         this.defaultPrice = defaultPrice;
         this.defaultCurrency = defaultCurrency;
         this.productCategory = productCategory;
+        productList.add(this);
     }
 
 
@@ -76,10 +77,6 @@ public class Product {
         return productList;
     }
 
-
-    @Override
-    public String toString() {
-        return super.toString();
-    }
+    public String toString() { return toString(); }
 }
 
