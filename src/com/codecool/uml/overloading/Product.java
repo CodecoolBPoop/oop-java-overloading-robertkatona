@@ -1,11 +1,10 @@
 package com.codecool.uml.overloading;
 
-import com.sun.tools.javac.util.ArrayUtils;
+
 
 import java.util.ArrayList;
 import java.util.Currency;
 import java.util.List;
-import java.util.Arrays;
 
 public class Product {
 
@@ -87,6 +86,8 @@ public class Product {
     }
 
     @Override
-    public String toString() { return super.toString(); }
+    public String toString() {
+        return super.toString();
+    }
 }
 

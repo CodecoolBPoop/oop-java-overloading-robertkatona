@@ -24,6 +24,7 @@ public class Webshop {
         System.out.println(productOne.getFeaturedProductCategory().getName());
         System.out.println(productOne.getFeaturedProductCategory().getDepartment());
         System.out.println(productOne.getFeaturedProductCategory().getDescription());
+        System.out.println();
 
         System.out.println(productTwo.getFeaturedProductCategory().getStartDate());
         System.out.println(productTwo.getId());
@@ -32,7 +33,8 @@ public class Webshop {
         System.out.println(productTwo.getFeaturedProductCategory().getName());
         System.out.println(productTwo.getFeaturedProductCategory().getDepartment());
         System.out.println(productTwo.getFeaturedProductCategory().getDescription());
-
+        System.out.println();
+        
         System.out.println(productThree.getFeaturedProductCategory().getStartDate());
         System.out.println(productThree.getId());
         System.out.println(productThree.getName());

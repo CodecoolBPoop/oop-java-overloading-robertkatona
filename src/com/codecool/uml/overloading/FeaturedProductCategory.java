@@ -2,7 +2,7 @@ package com.codecool.uml.overloading;
 
 import java.util.Date;
 
-public class FeaturedProductCategory extends ProductCategory{
+public class FeaturedProductCategory extends ProductCategory {
 
     private Date startDate;
     private Date endDate;
@@ -12,7 +12,6 @@ public class FeaturedProductCategory extends ProductCategory{
         super(name, department, description);
         this.startDate = startDate;
     }
-
 
 
     public Date getStartDate() {
