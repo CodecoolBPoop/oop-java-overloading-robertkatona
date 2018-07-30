@@ -85,5 +85,9 @@ public class Product {
     public List<Product> getProductList() {
         return productList;
     }
+
+    public String toString() {
+        return "id: " + this.id + ", name: " + this.name + ", default price: " + this.defaultPrice + ", default currency: " + this.defaultCurrency;
+    }
 }
 
