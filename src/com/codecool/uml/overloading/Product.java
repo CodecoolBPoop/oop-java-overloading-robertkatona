@@ -19,6 +19,8 @@ public class Product {
 
     private static List<Product> productList = new ArrayList<Product>();
 
+    public Product(){}
+
     public Product(String name, float defaultPrice, Currency defaultCurrency, FeaturedProductCategory featuredProductCategory, Supplier supplier) {
         this.id = counter++;
         this.name = name;
@@ -80,6 +82,14 @@ public class Product {
 
     public void setSupplier(Supplier supplier) {
         this.supplier = supplier;
+    }
+
+    public void getProductsBy(List<Product> listOfProducts, String name){
+        for (Product each: listOfProducts) {
+            if (each.getFeaturedProductCategory().getDepartment() == name) {
+                System.out.println(each);
+            }
+        }
     }
 
     public List<Product> getProductList() {
