@@ -13,6 +13,8 @@ public class Webshop {
                 "This is a very good personal computer",
                  new Date());
 
+        FeaturedProductCategory mobile = new FeaturedProductCategory("apple", "Smartphone","The best mobile phone ever", new Date());
+
         Supplier supplierWaberer = new Supplier("Waberer","Using Trucks");
         Supplier supplierDHL = new Supplier("DHL", "Using Planes");
 
