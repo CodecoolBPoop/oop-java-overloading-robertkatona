@@ -5,6 +5,7 @@ import java.util.List;
 
 public class ProductCategory {
 
+    private int id;
     private String name;
     private String department;
     private String description;
@@ -15,6 +16,13 @@ public class ProductCategory {
         this.description = description;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -48,6 +56,6 @@ public class ProductCategory {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "name: " + this.name + ", description: " + this.description + ", department: " + this.department;
     }
 }

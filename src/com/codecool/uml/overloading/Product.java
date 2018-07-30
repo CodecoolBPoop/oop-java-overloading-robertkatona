@@ -15,16 +15,17 @@ public class Product {
     private Currency defaultCurrency;
     private ProductCategory productCategory;
     private FeaturedProductCategory featuredProductCategory;
-
     private Supplier supplier;
+
     private static List<Product> productList = new ArrayList<Product>();
 
-    public Product(String name, float defaultPrice, Currency defaultCurrency, FeaturedProductCategory featuredProductCategory) {
+    public Product(String name, float defaultPrice, Currency defaultCurrency, FeaturedProductCategory featuredProductCategory, Supplier supplier) {
         this.id = counter++;
         this.name = name;
         this.defaultPrice = defaultPrice;
         this.defaultCurrency = defaultCurrency;
         this.featuredProductCategory = featuredProductCategory;
+        this.supplier = supplier;
         productList.add(this);
     }
 
@@ -83,11 +84,6 @@ public class Product {
 
     public List<Product> getProductList() {
         return productList;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
     }
 }
 

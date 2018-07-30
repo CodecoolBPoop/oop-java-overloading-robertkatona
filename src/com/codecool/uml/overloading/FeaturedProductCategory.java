@@ -14,6 +14,7 @@ public class FeaturedProductCategory extends ProductCategory {
     }
 
 
+
     public Date getStartDate() {
         return startDate;
     }
